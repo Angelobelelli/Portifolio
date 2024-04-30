@@ -4,65 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/icons8-favicon-32.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="imagens/image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css?v=1.7">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Potfólio | Angelo Belelli</title>
     <style>
-        
     </style>
 </head>
 
-<body>
+<body >
+   
     <header>
+      
         <div id="tittle">
-            <img src="imagens/image-removebg-preview.png" alt="">
+            <a href="#first-section"><img src="imagens/image-removebg-preview.png" alt=""></a>
         </div>
         <div class="centro">
             <ul type="none">
                 <a href="#first-section"><li>Sobre Mim</li></a>
-                <a href="#second-section"><li>Tecnologias</li> </a>
-                <a href="#thirdSection"><li>Meus projetos</li></a>              
+                <a href="#teste"><li>Tecnologias</li> </a>
+                <a href="#teste2"><li>Meus projetos</li></a>              
             </ul>
         </div>
-        <div class="esquerda">
-            <a href="https://www.instagram.com/angel0__027/" target="_blank"><i class='bx bxl-instagram'></i></a>     
-
-            <a href= "https://twitter.com/Angelobelelli__"target="_blank"><i class='bx bxl-twitter' ></i></a>
-
-            <a href="https://www.linkedin.com/in/angelo-belelli-bugni-9b4b06238/"target="_blank"><i class='bx bxl-linkedin'></i></a>
-        </div>
+       
+            <a href="#area-login" id="botaoContato">Contato</a>
+       
     </header>
 
-   
-        <section id="first-section">
+  
+          <section id="first-section">
+          
             <div class="sobreMim" >
                 <h1 >Olá! Eu sou  <br> <strong >Angelo Belelli</strong></h1>
                 <p>e sou um entusiasta do mundo da tecnologia com foco em desenvolvimento front-end. Desde o início da minha jornada, fiquei fascinado pela capacidade de criar experiências interativas e atraentes na web.
                 </p>              
             </div>   
             <div class="minhaFoto">
-                <img src="imagens/IMG_6411.JPG" alt="">
+                <img src="imagens/minhaFoto.jpeg" alt="">
             </div>
-        </section>
-
-        <section id="second-section">
-            <h1><Table>TECNOLOGIAS</Table></h1>
-                
-                <div>
-                    <img src="imagens/html.png" alt="">
-                    <img src="imagens/css.png" alt="">
-                    <img src="imagens/js.png" alt="">
-                </div>
-        </section>
        
+        </section>
+    
+        
+        <div id="teste">
+            <section id="second-section">
+                <div class="caixaDeTecnologia">
+                    <h1><Table>TECNOLOGIAS</Table></h1>
+                        <div class="tecnologias">
+                                <div class="html"><i  class='bx bxl-html5' > </i> </div>
+                                <div class="css"><i class='bx bxl-css3' ></i> </div>
+                                <div class="js"><i class='bx bxl-javascript'> </i> </div>
+                                <div class="figma"><i class='bx bxl-figma' > </i> </div>
+                                <div class="git"><i class='bx bxl-git'></i> </div>
+                        </div>
+                
+            </section>
+        </div>
+
+       <div id="teste2">
             <section id="thirdSection">
                 <h1>PROJETOS</h1>
                 <div id="content">
                   
+                        
+                    
+                    
                     <div class="card">
-                
                         <div class="topCard">
                             <h2 class="title">Projeto XMEN</h2>
                             <span class="secondText">Projeto Feito em <strong>HTML</strong> , <strong>CSS</strong> e <strong>JavaScript</strong></span>
@@ -117,20 +125,48 @@
                     </div>
                 
                 </div>
+                
             </section>  
-           
+        </div>
+            <section id="area-login" class="area-login">
+               
+                <h1>Fale <strong>Comigo</strong></h1>
+                <div class="login">
+                    
+                  <h2>Entre em contato</h2>
+                    <br>
+                    <form method="post" action="">
+                        <input type="text" name="nome" placeholder="Seu Nome completo:" autocomplete="off">
+                        <input type="email" name="email" placeholder="Seu Email:"  autocomplete="off">
+                        <input type="" name="telefone" placeholder="Seu celular:"  autocomplete="off">
+                        <textarea name="message" id="mensagem" cols="30" rows="10" placeholder ="Digite sua mensagem:"  style="resize: none;"></textarea>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            
+            </section>
+
             <footer>
               
                 
-                <ul type="none">
-                    <li>Sobre Mim</li>
-                    <li>Tecnologias</li>
-                    <li>Projetos</li>
-                </ul>
+                <div class="geral">
+                    <div id="emailDireita">
+                        <i class='bx bx-envelope' ></i>
+                        <p>contato@angelobelelli.online</p>
+                    </div>
+                    <div class="esquerda">
+                        <a href="https://www.linkedin.com/in/angelo-belelli-bugni-9b4b06238/"target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/Angelobelelli"target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.instagram.com/angel0__027/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    
+                    </div>
+                </div>
                 <div class="underline"><span></span></div>
                 <h1>© 2024 Company, Inc.</h1>
                 
             </footer>
-</body>
 
+  
+        </body>
+       
 </html>

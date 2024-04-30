@@ -4,3 +4,5 @@ document.addEventListener('DOMContentLoaded', function(){
       document.querySelector('.typing-text').classList.add('typing');
     }, 1000);
   });
+
+  

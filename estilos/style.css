@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+#teste2{
+    height: 100%;
+}
 html{
     scroll-behavior: smooth; /* Faz com que a rolagem seja suave */
+    scroll: "top";
 }
 
 ::-webkit-scrollbar {
@@ -40,15 +44,20 @@ body {
 header{
     height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;  
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     width: 100%;
-    background-color: rgba(56, 51, 51, 0.719);
+    background-color: rgb(56 51 51 / 91%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 ul{
     padding: 0px;
 }
-#tittle  > img{
+#tittle   img{
     margin-top: 6px;
     width: 100px;
     
@@ -86,7 +95,32 @@ ul{
     font-size: 30px;
     
 }
-
+#botaoContato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #AC32EB;
+    box-shadow: 1px 1px 10px #AC32EB;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+    height: 33px;
+    transform: scale(1);
+    transition: color 0.5s, transform 0.5s;
+}
+a#botaoContato{
+    color: white;
+}
+#botaoContato:hover{
+    background-color: #AC32EB;
+    transform: scale(1.13);
+}
+#botaoContato a {
+    color: white;
+}
 #tittle strong {
     color: #AC32EB;
 }
@@ -114,6 +148,8 @@ div > h1{
     height: 100vh;
     font-weight: 300;
     line-height: 40px;
+    margin: 50px 0px;
+   
     
 
     
@@ -129,7 +165,7 @@ div > h1{
 .sobreMim p{
     width: 70%;
     font-size: 20px;
-}
+}   
 
 .sobreMim h1{
     width: 70%;
@@ -155,23 +191,34 @@ div > h1{
     text-decoration: underline;
 }
 #first-section img{
-    height: 400px;
+    height: 500px;
     width: auto;
     border-radius: 50%;
 }
-
+#teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 #second-section {
+    background-color: #262626ae;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.466);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     height: 30vh;
-    line-height: 43px;
-    background-color: #34044d;
     padding: 50px;
+    border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
+
     
 }
+
+
 
 .cards{
     width: 120px;
@@ -194,9 +241,9 @@ div > h1{
 
 
 #second-section h1 {
-    font-weight: 400;
-    font-size: 25px;
-    
+    font-weight: 700;
+    font-size: 35px;
+    color: #AC32EB;
 }
 #second-section img{
         width: 100px;
@@ -212,25 +259,72 @@ div > h1{
 }
 
 
+.tecnologias{
+    display: flex;
+    flex-direction: row;
+}
+.colunaTecnologia{
+    display: flex;
+}
+.tecnologias i{
+    
+    transform: scale(1);
+    transition: color 0.5s, transform 0.5s;
+    font-size: 100px;
+    margin: 0px 20px;
+    margin-top: 70px;
+    color: #aeabab;
+    
+   
+}
 
-.bxl-html5:before {
-    color: #E95F2D;
-    font-size: 70px;
-    filter: drop-shadow(1px 2px 1px white); 
+.tecnologias i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 4px white);
+   
 }
-.bxl-css3:before{
-    color: #0C73B8;
-    font-size: 70px;
-    filter: drop-shadow(1px 2px 1px white); 
+.tecnologias{
+   
 }
-.bxl-javascript:before{
-    color: #E5A228;
-    font-size: 70px;
-    filter: drop-shadow(1px 2px 1px white); 
+.tecnologias i span{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.html i,.css i,.js i,.figma i, .git i{
+    filter: drop-shadow(0px 0px 2px white);
+   
 }
 
-ul{
-    list-style:circle
+.html i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 30px #E44D25);
+   color: #E44D25;
+}
+.css i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 30px #214CE5);
+   color: #214CE5;
+}
+
+.js i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 30px #F7E025);
+   color: #F7E025;
+}
+.figma i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 30px #0AC97F);
+  color: #0AC97F;
+}.git i:hover{
+    transform: scale(1.09);
+   filter: drop-shadow(1px 1px 30px #F05539);
+  color: #F05539;
+}
+
+.card:hover {
+    transform: scale(1.02);
+  
 }
 
 
@@ -311,16 +405,17 @@ ul{
     margin: 0px;
 }
 .card {
-    background-color: #ebd0f9;
+    background-color: #e4d8eb;
     border-radius: 20px;
-    box-shadow: 4px 6px 50px #AC32EB;
-    width: 330px;   
+    box-shadow: 0px 0px 50px #AC32EB;
+    width: 350px;   
     margin: 10px 40px;
     transform: scale(1);
     transition: color 0.5s, transform 0.5s;
     
 
 }
+
 .card:hover{
     transform: scale(1.02);
 }
@@ -337,6 +432,7 @@ ul{
     
     height: 200px;
     width: 320px;
+    box-shadow: 0px 0px 30px black;
    
   
 }
@@ -386,8 +482,9 @@ span.secondText {
 #thirdSection h1{
     margin-top: 200px;
     text-align: center;
-    font-size: 35px;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 40px;
+    color: #AC32EB;
 }
 
 p.bottonText {
@@ -447,7 +544,12 @@ footer h1{
     overflow: hidden;
     
 }
-
+.geral{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 .underline span{
     width: 7px;
     height: 100%;
@@ -457,22 +559,140 @@ footer h1{
     border-radius: 3px;
     animation: moving 1.5s linear infinite;
 }
+.area-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0px;
+}
+.login{
+    background-color: #19191A;
+    width: 410px;
+    height: 488px;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0px 0px 20px #AC32EB;
 
+
+}.login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+}
+.login h1{
+    font-size: 10px;
+}
+
+.login input{
+    margin: 9px 0px;
+    background-color: #19191A;
+    border: 1px solid #ffffff;
+    height: 45px;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    padding-left: 10px; 
+    font-size: 17px;
+    
+   
+}
+.text{
+   width: 100px;
+   height: 30px;
+}
+textarea {
+    display: block;
+    margin: 9px 0px;
+    background-color: #19191A;
+    border: 1px solid #ffffff;
+    height: 45px;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    padding-left: 10px; 
+    font-size: 17px;
+}
+.login img{
+    width: 95px;
+    height: auto;
+    padding-top: 0px;   
+}
+input::placeholder{
+   
+    font-size: 14px;
+    
+ }
+ form [type="submit"]{
+     display: block;
+    
+     background-color: #AC32EB;
+     font-size: 17px;
+     text-transform: uppercase;
+     cursor: pointer;
+     border: none;    
+
+ }
+ 
+.area-login h1{
+     color: white;
+     text-align: center;
+     margin-bottom: 2px;
+     height: 54px;
+     font-size: 44px;
+     margin-bottom: 20px;
+ }
+.login h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 2px;
+    height: 54px;
+    font-size: 24px;
+}
+.area-login strong{
+    color: #AC32EB;
+}
+#mensagem{
+    height: 150px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#emailDireita{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#emailDireita i{
+    margin: 0px 10px;
+    font-size: 25px;
+    color: #AC32EB;
+}
   
 @media (max-width: 763px){
-    header{
+    body{
+        margin: 0px;
+        padding: 0px 0px;
         width: 100%;
     }
-   
+
     header{
-       
+        width: 100%;
         background-size: 100%;
-        
-        
     }
-    .centro ul a li {
-        display: flex;
+   
+    .centro , #botaoContato{
+        display: none;
     }
+  
     
     header .esquerda {
         display: inline;
@@ -480,15 +700,75 @@ footer h1{
         
     }
 
-    #first-section{
+    #first-section {
         display: flex;
-        justify-content: center;
         align-items: center;
+        flex-direction: column;
         text-align: center;
-        width: 100vh;
-        margin-top: 30px;
+        width: 100%;
+        margin: 30px 0px;
+        padding: 100px 0px;
     }
+    .sobreMim {
+        width:  100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #first-section img {
+        height: 200px;
+        width: auto;
+        border-radius: 50%;
+    }
+    #second-section {
+        width:70%;
+        height: 50%;
+        margin: 50px 0px;
+    }
+    .area-login h1{
+       margin-top: 200px ;
+    }
+
+    #thirdSection {
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        
+    }
+    .tecnoligaTecnologia{
+        
+    }
+    .tecnologias{
+        display: ruby;
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        height: 100%;
+    }
+    .area-login{
+        width: 100%;
+      
+    }
+    .login {
+        width: 63%;
+    }
+    .geral {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.tecnologias i {
+
+    margin: 0px 0px;
+    margin-top: 70px;
+   
 }
 
 
+}
 
