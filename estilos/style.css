@@ -751,7 +751,7 @@ input::placeholder{
     #first-section {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
         width: 100%;
         margin: 30px 0px;
@@ -764,7 +764,7 @@ input::placeholder{
         align-items: center;
     }
     #first-section img {
-        height: 200px;
+      
         width: auto;
         border-radius: 50%;
     }
@@ -802,7 +802,54 @@ input::placeholder{
         flex-direction: column;
         gap: 10px;
 }
+#first-section .textoAbout {
+    margin: 0px;
+    width: 100%;
+}
+.righ h1, h2 {
+    height: 100%;
+    width: 110%;
+   
+}
+.righ {
+    margin-left: 25px;
+    width: 60%;
+}
+.righ h2 {
+    width: 100%;
+}
+.righ p {
+    
+    width: 100%;
+ 
+}
+.background-about{
+    width: 30%;
+  
+}
+#sobreMim{
+    padding: 200px 0px;
+}
 
+
+#first-section h1 {
+    font-weight: 300;
+    line-height: 50px;
+    margin-top: 52px;
+    width: 100%;
+}
+
+
+.minhaFoto img {
+    height: 250px;
+}
+
+.textoAbout{
+    margin: 0px;
+}
+.tecnologia img{
+    margin: 0px;
+}
 
 
 }
