@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/image-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/image-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css?v=1.7">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -13,12 +13,21 @@
     </style>
 </head>
 
+<style>
+   .notbookFundo{
+    
+        background-image: url('imagens/notbook.jpeg'); /* substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+        background-size: cover; /* para cobrir toda a área da div */
+        background-position: center; /* centralizar a imagem na div */
+    }
+</style>
+
 <body >
    
     <header>
       
         <div id="tittle">
-            <a href="#first-section"><img src="imagens/image-removebg-preview.png" alt=""></a>
+            <a href="#first-section"><img src="img/image-removebg-preview.png" alt=""></a>
         </div>
         <div class="centro">
             <ul type="none">
@@ -36,16 +45,62 @@
           <section id="first-section">
           
             <div class="sobreMim" >
-                <h1 >Olá! Eu sou  <br> <strong >Angelo Belelli</strong></h1>
-                <p>e sou um entusiasta do mundo da tecnologia com foco em desenvolvimento front-end. Desde o início da minha jornada, fiquei fascinado pela capacidade de criar experiências interativas e atraentes na web.
-                </p>              
+                <h1 >Olá!   <br> 
+                    Meu nome é <br>
+                    <strong> Angelo Belelli </strong>
+                </h1>
+                <div class="tecnologia">
+                    Techs:  
+                    <div class="icones">
+                        <ul>
+                            <li><img src="svg/html.svg" alt=""></li>
+                            <li><img src="svg/css3.svg" alt=""></li>
+                            <li><img src="svg/javascript.svg" alt=""></li>
+                            <li><img src="svg/git.svg" alt=""></li>
+                            <li><img src="svg/figma.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                
+             
+
+
             </div>   
             <div class="minhaFoto">
-                <img src="imagens/minhaFoto.jpeg" alt="">
+                <div class="img">
+                    <img src="img/minhaFoto.jpeg" alt="">
+                </div>
+                <div class="esquerda">
+                    <a href="https://www.linkedin.com/in/angelo-belelli-bugni-9b4b06238/"target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Angelobelelli"target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/angel0__027/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                
+                </div>
+               
+                
             </div>
-       
+
+            <div class="icones">
+                <h1>
+                    
+                </h1>
+                
+
+                
+              </div>
+            
         </section>
-    
+         <section id="sobreMim">
+            <div class="background-about">
+                <div class="img-wrapper">
+                    <img src="img/img.2.jpg" alt="">
+                </div>
+            </div>
+             <div class="righ">
+                 <p>e sou um entusiasta do mundo da tecnologia com foco em desenvolvimento front-end. Desde o início da minha jornada, fiquei fascinado pela capacidade de criar experiências interativas e atraentes na web.
+                     </p>
+             </div>
+         </section>
         
         <div id="teste">
             <section id="second-section">
@@ -75,7 +130,7 @@
                             <h2 class="title">Projeto XMEN</h2>
                             <span class="secondText">Projeto Feito em <strong>HTML</strong> , <strong>CSS</strong> e <strong>JavaScript</strong></span>
                         </div>
-                        <div class="mediaCard"><img src="imagens/Xmen.png" alt=""></div>
+                        <div class="mediaCard"><img src="img/Xmen.png" alt=""></div>
                 
                         <div class="bottonCard">
                             <p class="bottonText"> Esse é um projeto desenvolvido durante uma semana, realizado juntamente com os gemeos do Dev em Dobro.
@@ -92,7 +147,7 @@
                             <span class="secondText">Projeto Feito apenas com <strong>HTML</strong> e <strong>CSS</strong>.</span>
                 
                         </div>
-                        <div class="mediaCard"><img src="imagens/telaDeLogin.png" alt=""></div>
+                        <div class="mediaCard"><img src="img/telaDeLogin.png" alt=""></div>
                 
                         <div class="bottonCard">
                             <p class="bottonText">Esta tela de login teve uma inspiração ao acesso do Curso DevQuest.
@@ -111,7 +166,7 @@
                             <h2 class="title">Ladding Page</h2>
                             <span class="secondText">Projeto Feito com  <strong>HTML</strong> , <strong>CSS</strong> e <strong>JavaScript</strong></span>
                         </div>
-                        <div class="mediaCard"><img src="imagens/mooby.png" alt=""></div>
+                        <div class="mediaCard"><img src="img/mooby.png" alt=""></div>
                         <div class="bottonCard">
                             <p class="bottonText">
                                 Projeto feito com para uma empresa de um aplitivo de Mobiblidade Urbana
@@ -154,12 +209,7 @@
                         <i class='bx bx-envelope' ></i>
                         <p>contato@angelobelelli.online</p>
                     </div>
-                    <div class="esquerda">
-                        <a href="https://www.linkedin.com/in/angelo-belelli-bugni-9b4b06238/"target="_blank"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/Angelobelelli"target="_blank"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.instagram.com/angel0__027/" target="_blank"><i class='bx bxl-instagram'></i></a>
                     
-                    </div>
                 </div>
                 <div class="underline"><span></span></div>
                 <h1>© 2024 Company, Inc.</h1>

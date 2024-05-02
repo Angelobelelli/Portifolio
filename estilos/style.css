@@ -56,6 +56,8 @@ header{
 }
 ul{
     padding: 0px;
+    list-style: none;
+    display: flex;
 }
 #tittle   img{
     margin-top: 6px;
@@ -169,11 +171,16 @@ div > h1{
 
 .sobreMim h1{
     width: 70%;
-    font-size: 1.7em;
+    font-size: 2.4em;
 }
 .minhaFoto{
     width: 50%;
     text-align: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #first-section > div h1{
     
@@ -181,19 +188,33 @@ div > h1{
     line-height: 50px;
    
 }
+.icones{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.notbookFundo{
+   width: 100%;
+   height: 100%;
+}
 
 #first-section > div strong{
     color: #AC32EB;
-    font-size: 2.5em;
+    font-size: 2.2em;
     
 }
 #first-section > div > p strong:hover{
     text-decoration: underline;
 }
-#first-section img{
-    height: 500px;
+.minhaFoto img{
+    height: 400px;
     width: auto;
     border-radius: 50%;
+}
+#first-section img{
+    object-fit: cover;
+  
 }
 #teste{
     display: flex;
@@ -201,6 +222,67 @@ div > h1{
     align-items: center;
     height: 100vh;
 }
+#sobreMim{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.right{
+    width: 50%;
+    height: 90%;
+}
+
+.background-about{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img-wrapper{
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+.img-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: 
+        linear-gradient(.25turn, transparent 30%, black),
+        linear-gradient(.5turn, transparent 30%, black),
+        linear-gradient(1turn, transparent 30%, black);
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+.redesociais img{
+    width: 50px;
+    height: 50px;
+}
+.tecnologia{
+    margin-top: 70px;
+    width: 70%;
+}
+.tecnologia img{
+    margin-right: 20px;
+}
+.tecnologia h1{
+   font-size: 22px;
+   
+}
+
 #second-section {
     background-color: #262626ae;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.466);
