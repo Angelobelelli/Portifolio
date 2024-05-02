@@ -58,6 +58,9 @@ ul{
     padding: 0px;
     list-style: none;
     display: flex;
+   
+    align-items: center;
+
 }
 #tittle   img{
     margin-top: 6px;
@@ -275,12 +278,7 @@ div > h1{
     object-fit: cover;
   
 }
-#teste{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 #sobreMim{
     width: 100%;
     height: 100vh;
@@ -344,22 +342,7 @@ div > h1{
 }
 
 
-#second-section {
-    background-color: #262626ae;
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.466);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    height: 30vh;
-    padding: 50px;
-    border-radius: 20px;
-    width: 100%;
-    border-radius: 20px;
 
-    
-}
 
 
 
@@ -369,37 +352,6 @@ div > h1{
     background-color: white;
 }
 
-#second-section > ul li{
-    display: inline;
-    padding: 0px 40px;
-    line-height: 40px;
-}
-#second-section > ul li abbr{
-    display: inline;
-    padding: 0px 40px;
-    line-height: 40px;
-    text-decoration: none;
-    
-}
-
-
-#second-section h1 {
-    font-weight: 700;
-    font-size: 35px;
-    color: #AC32EB;
-}
-#second-section img{
-        width: 100px;
-        height: auto;
-        margin: 20px 40px;
-        filter: drop-shadow(1px 1px 6px white);
-        transform: scale(1);
-        transition: color 0.5s, transform 0.5s;
-}
-#second-section img:hover{
-        transform: scale(1.09);
-
-}
 
 
 .tecnologias{
@@ -409,61 +361,8 @@ div > h1{
 .colunaTecnologia{
     display: flex;
 }
-.tecnologias i{
-    
-    transform: scale(1);
-    transition: color 0.5s, transform 0.5s;
-    font-size: 100px;
-    margin: 0px 20px;
-    margin-top: 70px;
-    color: #aeabab;
-    
-   
-}
 
-.tecnologias i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 4px white);
-   
-}
-.tecnologias{
-   
-}
-.tecnologias i span{
-    font-size: 25px;
-    font-family: 'Montserrat', sans-serif;
 
-}
-.html i,.css i,.js i,.figma i, .git i{
-    filter: drop-shadow(0px 0px 2px white);
-   
-}
-
-.html i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 30px #E44D25);
-   color: #E44D25;
-}
-.css i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 30px #214CE5);
-   color: #214CE5;
-}
-
-.js i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 30px #F7E025);
-   color: #F7E025;
-}
-.figma i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 30px #0AC97F);
-  color: #0AC97F;
-}.git i:hover{
-    transform: scale(1.09);
-   filter: drop-shadow(1px 1px 30px #F05539);
-  color: #F05539;
-}
 
 .card:hover {
     transform: scale(1.02);
@@ -627,7 +526,11 @@ span.secondText {
     text-align: center;
     font-weight: 700;
     font-size: 40px;
+    display: flex;
+    height: 20%;
     color: #AC32EB;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 p.bottonText {
@@ -863,11 +766,7 @@ input::placeholder{
         width: auto;
         border-radius: 50%;
     }
-    #second-section {
-        width:70%;
-        height: 50%;
-        margin: 50px 0px;
-    }
+
     .area-login h1{
        margin-top: 200px ;
     }
@@ -879,12 +778,8 @@ input::placeholder{
     .card{
         
     }
-    .tecnoligaTecnologia{
-        
-    }
-    .tecnologias{
-        display: ruby;
-    }
+
+ 
     #content {
         display: flex;
         flex-direction: column;
@@ -899,18 +794,13 @@ input::placeholder{
         width: 63%;
     }
     .geral {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
 }
-.tecnologias i {
 
-    margin: 0px 0px;
-    margin-top: 70px;
-   
-}
 
 
 }
