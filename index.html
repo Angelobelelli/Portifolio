@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/image-removebg-preview.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css?v=1.7">
+    <link rel="stylesheet" href="estilos/style.css?v=2.2">
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Potfólio | Angelo Belelli</title>
@@ -34,14 +35,16 @@
         </div>
         <div class="centro">
             <ul type="none">
-                <a href="#first-section"><li>Ínicio</li></a>
-                <a href="#sobreMim"><li>Sobre Mim</li></a>
-                <a href="#teste2"><li>Meus projetos</li></a>  
+                <a href="javascript:void(0);" onclick="scrollToSection('first-section')"><li>Ínicio</li></a>
+                <a href="javascript:void(0);" onclick="scrollToSection('sobreMim')"><li>Sobre Mim</li></a>
+                <a href="javascript:void(0);" onclick="scrollToSection('teste2')"><li>Meus projetos</li></a>
+                <a href="javascript:void(0);" onclick="scrollToSection('area-login')"><li>Contato</li></a>
+                
                 <a href="#area-login" id="botaoContato">Contato</a>             
             </ul>
         </div>
         <div class="btn-abrir-menu" id="btn-menu">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" >
                 menu
             </span>
         </div>
@@ -247,4 +250,11 @@
   
         </body>
         <script src="scrollReaveal.js"></script>
+        <script>
+            function scrollToSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+      
 </html>

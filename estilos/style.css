@@ -160,6 +160,9 @@ a#botaoContato{
     flex-direction: column;
 
 }
+#btn-menu{
+    display: none;
+}
 .btn-abrir-menu span{
     color: #AC32EB;
     font-size: 35px;
@@ -193,9 +196,12 @@ a#botaoContato{
     padding: 20px 5%;
 }
 .menu-mobile nav ul li a  {
+    width: 100%;
+    display: flex;
     padding: 20px 4%;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
+    justify-content: flex-end;
 }
 .menu-mobile nav ul li a:hover  {
     background-color: #FFDE32 ;
@@ -802,9 +808,12 @@ input::placeholder{
 }
   
 @media (max-width: 763px){
-    
+    #btn-menu{
+        display: flex;
+    }
     .btn-abrir-menu span{
         display: flex;
+        margin-right: 20px;
     }
 
     body{
@@ -816,6 +825,7 @@ input::placeholder{
     header{
         width: 100%;
         background-size: 100%;
+        justify-content: space-between;
     }
    
     .centro , #botaoContato{
@@ -947,6 +957,9 @@ input::placeholder{
     width: 100%;
     
 }
-
+#tittle img {
+    margin-left: 20px;
+    width: 80px;
+}
 
 }
