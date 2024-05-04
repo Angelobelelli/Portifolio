@@ -145,6 +145,77 @@ a#botaoContato{
     
     
 }
+
+.mobile ul li   {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+   
+}
+.mobile a{
+    color: #AC32EB;
+}
+.mobile ul{
+    display: flex;
+    flex-direction: column;
+
+}
+.btn-abrir-menu span{
+    color: #AC32EB;
+    font-size: 35px;
+    display: none;
+}
+.menu-mobile{
+    height: 100vh;
+    background-color: #131313;
+    top: 0;
+    right: 0;
+    position: fixed ;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar span{
+    color: #AC32EB;
+    font-size: 40px;
+
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile nav ul li a  {
+    padding: 20px 4%;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+.menu-mobile nav ul li a:hover  {
+    background-color: #FFDE32 ;
+    width: 99.1%;
+    text-align: right;
+    color: black;
+    border-radius: 20px;
+    
+}
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.71);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    display: none;
+}
+
 div > h1{
     line-height: 25px;
 }
@@ -731,6 +802,11 @@ input::placeholder{
 }
   
 @media (max-width: 763px){
+    
+    .btn-abrir-menu span{
+        display: flex;
+    }
+
     body{
         margin: 0px;
         padding: 0px 0px;
