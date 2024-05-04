@@ -134,10 +134,13 @@ a#botaoContato{
 }
 
 .centro > ul a :hover{
-    color: #AC32EB;
+    color: #ac32eb;
     transform: scale(1.10);
     
     
+}
+a#botaoContato {
+    color: white;
 }
 .esquerda > a > i:hover{
     color: #AC32EB;
