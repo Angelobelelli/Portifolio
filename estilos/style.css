@@ -198,16 +198,17 @@ a#botaoContato {
 .menu-mobile .btn-fechar{
     padding: 20px 5%;
 }
-.menu-mobile nav ul li a  {
+.menu-mobile nav ul  a  {
     width: 100%;
     display: flex;
     padding: 20px 4%;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
     justify-content: flex-end;
+    margin-right: 20px;
 }
-.menu-mobile nav ul li a:hover  {
-    background-color: #FFDE32 ;
+.menu-mobile nav ul a:hover  {
+    background-color: #ac32eb ;
     width: 99.1%;
     text-align: right;
     color: black;
