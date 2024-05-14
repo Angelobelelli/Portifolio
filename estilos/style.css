@@ -3,6 +3,7 @@
 #teste2{
     height: 100%;
 }
+
 html{
     scroll-behavior: smooth; /* Faz com que a rolagem seja suave */
     cursor: "top";
@@ -431,6 +432,31 @@ div > h1{
 
 
 
+body.light {
+    background-color: #fff;
+    color: #000000;
+    transition: 0.5s;
+  }
+  
+  body.dark {
+    background-color: #000000;
+    color: #fff;
+    transition:0.5s;
+  }
+  .img-wrapper .light{
+    background: linear-gradient(.25turn, transparent 30%, white), linear-gradient(.5turn, transparent 30%, white), linear-gradient(1turn, transparent 30%, white);
+  }
+  #theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 
 

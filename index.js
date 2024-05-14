@@ -25,4 +25,22 @@ overlay.addEventListener('click' , ()=> {
 
 
 
+
+
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('light');
+  body.classList.toggle('dark');
+});
+
+// Set the initial theme based on user preference
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  body.classList.add('dark');
+} else {
+  body.classList.add('light');
+}
+
+
   
