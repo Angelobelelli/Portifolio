@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/image-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css?v=2.6">
+    <link rel="stylesheet" href="estilos/button.css">
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,7 +38,7 @@
             <ul type="none">
                 <a href="javascript:void(0);" onclick="scrollToSection('first-section')"><li>Ínicio</li></a>
                 <a href="javascript:void(0);" onclick="scrollToSection('sobreMim')"><li>Sobre Mim</li></a>
-                <a href="javascript:void(0);" onclick="scrollToSection('cartaoFidelidade')"><li>Cartao Fidelidade</li></a>
+                <a href="javascript:void(0);" onclick="scrollToSection('thirdSection')"><li>Projetos</li></a>
                 <a href="javascript:void(0);" onclick="scrollToSection('area-login')" id="botaoContato" >Contato</a>
                          
             </ul>
@@ -159,12 +160,38 @@
                         <div class="bottonCard">
                             <p class="bottonText"> Esse é um projeto desenvolvido durante uma semana, realizado juntamente com os gemeos do Dev em Dobro.
                             </p>
-                            <div class="actionCard">
-                                <a href="https://github.com/Angelobelelli/x-men" target="_blank">Acesse<i class='bx bxl-github'></i></a>
-                                <a href="https://angelobelelli.github.io/x-men/" target="_blank">Acesse<i class='bx bxs-right-top-arrow-circle'></i></a>
+                            <div class="buttoncontainer">
+                                <button class="cssbuttons-io">
+                                     <a href="https://github.com/Angelobelelli/x-men" target="_blank">
+                                         <span
+                                           ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0 0h24v24H0z" fill="none"></path>
+                                             <path
+                                               d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                               fill="currentColor"
+                                             ></path>
+                                    
+                                       </svg>
+                                       Code</span>
+                                    </a>
+                                   </button>
+                                   <a style="--clr: #7808d0" class="button" href="https://angelobelelli.github.io/x-men/" target="_blank">
+                                     <span class="button__icon-wrapper">
+                                         <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                             <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                         </svg>
+                                
+                                         <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                             <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                         </svg>
+                                     </span>
+                                     Explore All
+                                 </a>
                             </div>
                         </div>
                     </div>
+
+
                     <div class="card">
                         <div class="topCard">
                             <h2 class="title">Tela De Login</h2>
@@ -177,14 +204,37 @@
                             <p class="bottonText">Esta tela de login teve uma inspiração ao acesso do Curso DevQuest.
                             </p>
                 
-                
-                            <div class="actionCard">
-                                <a href="https://github.com/Angelobelelli/Tela-de-Login" target="_blank">Acesse<i class='bx bxl-github'></i></a>
-                                <a href="">Acesse<i class='bx bxs-right-top-arrow-circle'></i></a>
-                            </div>
+                            <div class="buttoncontainer">
+                                <button class="cssbuttons-io">
+                                     <a href="https://github.com/Angelobelelli/Tela-de-Login/tree/main/telaLogin" target="_blank">
+                                         <span
+                                           ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0 0h24v24H0z" fill="none"></path>
+                                             <path
+                                               d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                               fill="currentColor"
+                                             ></path>
+                                           </svg>
+                                           Code</span>
+                                     </a>
+                                   </button>
+                                   <a style="--clr: #7808d0" class="button" href="#" target="_blank">
+                                     <span class="button__icon-wrapper">
+                                         <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                             <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                         </svg>
+                                
+                                         <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                             <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                         </svg>
+                                     </span>
+                                     Explore All
+                                 </a>
+                            </div>   
                         </div>
                     </div>
                 
+
                     <div class="card">
                         <div class="topCard">
                             <h2 class="title">Ladding Page</h2>
@@ -196,10 +246,35 @@
                                 Projeto feito com para uma empresa de um aplitivo de Mobiblidade Urbana
                             </p>
                 
-                            <div class="actionCard">
-                                <a href="https://github.com/Angelobelelli/MoobyUrbano" target="_blank">Acesse<i class='bx bxl-github'></i></a>
-                                <a href="https://www.moobyurbano.online/" target="_blank">Acesse<i class='bx bxs-right-top-arrow-circle'></i></a>
-                            </div>
+                           <div class="buttoncontainer">
+                               <button class="cssbuttons-io" >
+                                <a href="https://github.com/Angelobelelli/MoobyUrbano" target="_blank">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M0 0h24v24H0z" fill="none"></path>
+                                      <path
+                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                    Code</span>
+                                </a>
+                                    
+                                  </button>
+                                  <a style="--clr: #7808d0" class="button" href="https://moobyurbano.online" target="_blank">
+                                    <span class="button__icon-wrapper">
+                                        <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
+                                            <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                        </svg>
+                               
+                                        <svg class="button__icon-svg  button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="none" viewBox="0 0 14 15">
+                                            <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+                                        </svg>
+                                    </span>
+                                    Explore All
+                                </a>
+                           </div>
+
                         </div>
                     </div>
                 

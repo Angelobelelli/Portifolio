@@ -480,7 +480,7 @@ div > h1{
 
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   
 }
 
@@ -573,9 +573,7 @@ div > h1{
 
 }
 
-.card:hover{
-    transform: scale(1.02);
-}
+
 .topCard{
     height: 100px;
 }
