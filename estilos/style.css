@@ -391,23 +391,23 @@ div > h1{
 .img-wrapper{
     height: 100%;
     width: 100%;
-
+  
     position: relative;
 }
-.img-wrapper::after{
+
+.img-wrapper::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background: 
-        linear-gradient(.25turn, transparent 30%, black),
-        linear-gradient(.5turn, transparent 30%, black),
-        linear-gradient(1turn, transparent 30%, black);
-}
+      linear-gradient(.25turn, transparent 30%, black),
+      linear-gradient(.5turn, transparent 30%, black),
+      linear-gradient(1turn, transparent 30%, black);
+      transition: background 0.9s ease; /* Adicionando transição suave nas cores */
+  }
 .img-wrapper img{
     width: 100%;
     height: 100%;
@@ -432,32 +432,6 @@ div > h1{
 }
 
 
-
-*.light {
-    background-color: #fff;
-    color: #000000;
-    transition: 0.5s;
-  }
-
-*.dark {
-    background-color: #000000;
-    color: #fff;
-    transition:0.5s;
-  }
-
-
-
-  #theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 
 
 
