@@ -651,6 +651,9 @@ footer{
     flex-direction: column;
     
 }
+.light footer{
+    color: white;
+}
 footer ul{
     display: inline-flex;
     list-style: none;
@@ -702,6 +705,24 @@ footer h1{
     flex-direction: column;
     margin: 100px 0px;
 }
+
+.light #area-login h1 {
+    color: #000;
+    transition: 0.5s;
+}
+.light .login input, textarea {
+    background-color: #fff;
+    border: 1px solid black;
+    transition: 0.5s;
+
+}
+.light .login {
+    background-color: #fff;
+    border: 1px solid black;
+    transition: 0.5s;
+
+}
+
 .login{
     background-color: #19191A;
     width: 410px;
@@ -753,6 +774,11 @@ textarea {
     padding-left: 10px; 
     font-size: 17px;
 }
+.light textarea{
+    background-color: #fff;
+    border: 1px solid black;
+    transition: 0.5s;
+}
 .login img{
     width: 95px;
     height: auto;
@@ -763,9 +789,8 @@ input::placeholder{
     font-size: 14px;
     
  }
- form [type="submit"]{
+ form [type="submit"] {
      display: block;
-    
      background-color: #AC32EB;
      font-size: 17px;
      text-transform: uppercase;
@@ -773,6 +798,16 @@ input::placeholder{
      border: none;    
 
  }
+ .light form [type="submit"]{
+    display: block;
+    background-color: #AC32EB;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;    
+    transition: 0.5s;
+
+}
  
 .area-login h1{
      color: white;
