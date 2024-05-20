@@ -708,18 +708,18 @@ footer h1{
 
 .light #area-login h1 {
     color: #000;
-    transition: 0.5s;
+   
 }
 .light .login input, textarea {
     background-color: #fff;
     border: 1px solid black;
-    transition: 0.5s;
+    
 
 }
 .light .login {
     background-color: #fff;
     border: 1px solid black;
-    transition: 0.5s;
+    
 
 }
 
