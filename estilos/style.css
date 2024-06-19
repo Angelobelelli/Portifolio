@@ -556,10 +556,19 @@ div > h1{
     text-align: center;
     height: 210px;
     width: 100%;
+    
 }
+<<<<<<< HEAD
 .mediaCard img{ 
     height: 200px;
     width: 320px;
+=======
+.mediaCard img{
+
+    height: 200px;
+    width: 320px;
+    box-shadow: 0px 0px 15px black;
+>>>>>>> c95eab4cf804aba877319470d0f353b206b634fe
    
   
 }
