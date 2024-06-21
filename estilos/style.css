@@ -556,12 +556,11 @@ div > h1{
     text-align: center;
     height: 210px;
     width: 100%;
-}
-.mediaCard img{
     
+}
+.mediaCard img{ 
     height: 200px;
     width: 320px;
-    box-shadow: 0px 0px 30px black;
    
   
 }
@@ -651,6 +650,9 @@ footer{
     flex-direction: column;
     
 }
+.light footer{
+    color: white;
+}
 footer ul{
     display: inline-flex;
     list-style: none;
@@ -702,6 +704,24 @@ footer h1{
     flex-direction: column;
     margin: 100px 0px;
 }
+
+.light #area-login h1 {
+    color: #000;
+   
+}
+.light .login input, textarea {
+    background-color: #fff;
+    border: 1px solid black;
+    
+
+}
+.light .login {
+    background-color: #fff;
+    border: 1px solid black;
+    
+
+}
+
 .login{
     background-color: #19191A;
     width: 410px;
@@ -753,6 +773,11 @@ textarea {
     padding-left: 10px; 
     font-size: 17px;
 }
+.light textarea{
+    background-color: #fff;
+    border: 1px solid black;
+    transition: 0.5s;
+}
 .login img{
     width: 95px;
     height: auto;
@@ -763,9 +788,8 @@ input::placeholder{
     font-size: 14px;
     
  }
- form [type="submit"]{
+ form [type="submit"] {
      display: block;
-    
      background-color: #AC32EB;
      font-size: 17px;
      text-transform: uppercase;
@@ -773,6 +797,16 @@ input::placeholder{
      border: none;    
 
  }
+ .light form [type="submit"]{
+    display: block;
+    background-color: #AC32EB;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;    
+    transition: 0.5s;
+
+}
  
 .area-login h1{
      color: white;
