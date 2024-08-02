@@ -637,7 +637,7 @@ p.bottonText {
 
 footer{
     background-color: rgba(56, 51, 51, 0.719);
-    height: 200px;
+    height: 150px;
     width: 100%;
     text-align: center;
     display: inline-flex;
@@ -648,7 +648,12 @@ footer{
     flex-direction: column;
     
 }
-.light footer{
+
+footer .direitosAutorais span{
+    color: #AC32EB;
+    list-style: none;
+    }
+    .light footer{
     color: white;
 }
 footer ul{
@@ -656,12 +661,7 @@ footer ul{
     list-style: none;
     
 }
-footer ul li{
-    padding: 0px 50px;
-    font-weight: 200;
-    font-size: 18px;
-    
-}
+
 footer h1{
     font-size: 14px;
     font-weight: 200;
