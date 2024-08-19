@@ -292,6 +292,9 @@ div > h1{
     flex-direction: column;
 
 }
+.icones ul li img{
+    display: flex;
+}
 .notbookFundo{
    width: 100%;
    height: 100%;
