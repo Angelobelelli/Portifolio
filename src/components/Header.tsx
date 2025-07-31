@@ -17,9 +17,11 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">AB</span>
+          <div className="flex items-center"> 
+            <div className="w-12 h-12 bg-gradient-to-r  rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">
+                <img src='../../img/image-removebg-preview.png'></img>
+              </span>
             </div>
           </div>
 
