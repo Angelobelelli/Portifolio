@@ -4,19 +4,16 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex justify-center items-center pt-20">
       <div className="container flex justify-between mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex justify-around gap-12 items-center w-full">
           {/* Text Content */}
           <div className=" flex flex-col space-y-8 ">
             <div>
               <h2 className="text-2xl md:text-3xl text-gray-300 mb-2">Olá!</h2>
-              <h1 className="text-3xl md:text-4xl text-gray-300 mb-2">
+              <h1 className="text-3xl md:text-4xl text-gray-300 mb-2 h-12" >
                 Meu nome é
               </h1>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Angelo
-              </h1>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Belelli
+                Angelo Belelli
               </h1>
             </div>
 

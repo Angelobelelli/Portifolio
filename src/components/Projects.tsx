@@ -18,14 +18,14 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Projeto XMEN",
-      description: "Este é um projeto desenvolvido durante uma semana, utilizando fundamentos com foco em responsividade em todos os dispositivos do CSS.",
-      longDescription: "O Projeto XMEN foi desenvolvido como um desafio pessoal para aprimorar minhas habilidades em CSS responsivo. Durante uma semana intensa de desenvolvimento, criei uma landing page interativa inspirada no universo dos X-Men, implementando técnicas avançadas de CSS Grid, Flexbox e media queries para garantir uma experiência perfeita em todos os dispositivos.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      image: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+        title: "Projeto Integrador de Desenvolvimento Web",
+        description: "Sistema web e landing page com impacto social, desenvolvidos por alunos com foco em saúde, educação e inclusão digital no Amapá.",
+        longDescription: "O Projeto Integrador de Desenvolvimento Web foi realizado em parceria com uma turma de alunos, com o objetivo de aplicar conhecimentos teóricos em um contexto prático. O foco foi o desenvolvimento de um sistema web e uma landing page com impacto social, abordando temas relacionados à saúde, educação e inclusão digital no estado do Amapá. Durante o projeto, buscamos demonstrar os desafios tecnológicos enfrentados por algumas regiões do Brasil, propondo soluções acessíveis e funcionais mesmo com recursos limitados. O sistema inclui interações específicas para diferentes áreas temáticas, com design responsivo, acessível e voltado à experiência do usuário. Além disso, a aplicação foi construída em curto prazo, estimulando a criatividade e o trabalho em equipe dos alunos.",
+        technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js"],
+      image: "img/print1.png",
       images: [
-        "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+        "img/print1.png",
+        "img/print2.png"
       ],
       codeUrl: "#",
       demoUrl: "#",
@@ -42,8 +42,8 @@ const Projects = () => {
         "Otimizar imagens para diferentes resoluções",
         "Criar um sistema de grid responsivo personalizado"
       ],
-      duration: "1 semana",
-      team: "Individual",
+      duration: "4 semanas",
+      team: "Grupo",
       status: "Concluído"
     },
     {
