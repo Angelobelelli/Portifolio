@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,16 +9,16 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <Mail size={20} className="text-purple-500" />
             <a 
-              href="mailto:contato@angelobelelli.blog" 
+              href="mailto:angelobelelli.dev@gmail.com" 
               className="text-gray-300 hover:text-purple-400 transition-colors duration-300"
             >
-              contato@angelobelelli.blog
+            angelobelelli.dev@gmail.com
             </a>
           </div>
 
           <div className="flex space-x-6">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/angelobelelli/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
@@ -26,21 +26,14 @@ const Footer = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/Angelobelelli" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
             >
               <Github size={24} />
             </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
-            >
-              <Instagram size={24} />
-            </a>
+           
           </div>
         </div>
 

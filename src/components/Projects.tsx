@@ -47,23 +47,35 @@ const Projects = () => {
       status: "Concluído"
     },
     {
-      title: "Tela De Login",
-      description: "Esta tela de login traz uma inspiração de recursos do Curso DevQuest, criada com HTML e CSS.",
-      longDescription: "Projeto focado em criar uma interface de login moderna e elegante, aplicando conceitos avançados de design UI/UX. A tela foi desenvolvida com foco na experiência do usuário, implementando validações visuais, micro-interações e um design system consistente que pode ser facilmente integrado a qualquer aplicação web.",
-      technologies: ["HTML", "CSS"],
-      image: "https://images.pexels.com/photos/5935791/pexels-photo-5935791.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      images: [
-        "https://images.pexels.com/photos/5935791/pexels-photo-5935791.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+      title: "AuxTeck",
+      description: "Sistema web completo que conecta clientes a prestadores de serviços técnicos locais, com funcionalidades inspiradas em plataformas como OLX e GetNinjas.",
+      longDescription: "Este projeto foi desenvolvido com foco em resolver problemas de acesso e organização de serviços locais. A plataforma permite que prestadores se cadastrem, completem seu perfil profissional e ofereçam serviços, enquanto clientes podem encontrar, contratar e avaliar esses serviços. Com uma arquitetura robusta baseada em Fastify e React, o sistema oferece controle de autenticação por perfil, upload de documentos, avaliações, painel administrativo e integração com meios de pagamento.",
+      technologies: [
+        "Fastify",
+        "TypeScript",
+        "Knex",
+        "MySQL",
+        "React",
+        "TailwindCSS",
+        "Axios",
+        "JWT",
+        "Zod"
       ],
-      codeUrl: "#",
-      demoUrl: "#",
+      image: "img/tela1.png",
+      images: [
+        "img/tela1.png",
+        "img/tela2.png"
+      ],
+      codeUrl: "https://github.com/F0RT-DEV/Service-Local",
+      demoUrl: "",
       features: [
-        "Interface moderna e intuitiva",
-        "Validação visual de campos",
-        "Animações de transição suaves",
-        "Design responsivo",
-        "Acessibilidade otimizada"
+        "Sistema de cadastro e login com autenticação JWT e controle de acesso por role (cliente, prestador, admin).",
+        "Fluxo completo de ordens de serviço: criação, agendamento, execução, finalização e avaliação.",
+        "Perfis distintos com interface personalizada para cada tipo de usuário.",
+        "Administração de usuários, serviços, categorias e documentos via painel administrativo.",
+        "Geolocalização por CEP e estrutura de endereço detalhada.",
+        "Integração futura com gateway de pagamento e histórico de transações.",
+        "Validações com Zod e segurança na comunicação via JWT e bcrypt."
       ],
       challenges: [
         "Criar validações apenas com CSS",
@@ -71,38 +83,39 @@ const Projects = () => {
         "Garantir acessibilidade completa",
         "Desenvolver um design system reutilizável"
       ],
-      duration: "3 dias",
-      team: "Individual",
+      duration: "40 dias",
+      team: "Time de 3 pessoas",
       status: "Concluído"
     },
     {
-      title: "Landing Page",
-      description: "Projeto feito com uma empresa, com um arquivo de Mobilidade Urbana utilizando JavaScript.",
-      longDescription: "Landing page corporativa desenvolvida em parceria com uma empresa do setor de mobilidade urbana. O projeto envolveu a criação de uma interface moderna e informativa, com foco em conversão e experiência do usuário. Implementei funcionalidades interativas com JavaScript vanilla, garantindo performance otimizada e carregamento rápido.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+      title: "Dashboard Admin",
+      description: "Painel administrativo moderno e responsivo para gestão de usuários, permissões e relatórios em tempo real.",
+      longDescription: "Este projeto consiste em um dashboard administrativo completo, desenvolvido para facilitar o gerenciamento de dados em uma aplicação web. Possui autenticação segura, controle de permissões baseado em funções e visualização de dados em gráficos interativos. O design é responsivo, feito com foco em produtividade, usabilidade e acessibilidade. A aplicação foi desenvolvida utilizando React no frontend e Node.js no backend, com integração de APIs REST e persistência em banco de dados relacional.",
+      technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express", "PostgreSQL", "Chart.js"],
+      image: "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
       images: [
-        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+        "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
       ],
-      codeUrl: "#",
-      demoUrl: "#",
+      codeUrl: "https://github.com/usuario/dashboard-admin",
+      demoUrl: "https://dashboard-admin.vercel.app",
       features: [
-        "Design corporativo profissional",
-        "Formulários de contato funcionais",
-        "Seções interativas com JavaScript",
-        "Otimização SEO completa",
-        "Integração com Google Analytics"
+        "Autenticação com JWT e controle de sessão",
+        "Dashboard responsivo com gráficos interativos (Chart.js)",
+        "CRUD completo de usuários com validação e paginação",
+        "Controle de permissões por tipo de usuário (admin/editor/viewer)",
+        "Design limpo com TailwindCSS e dark mode",
+        "Exportação de relatórios em PDF e CSV"
       ],
       challenges: [
-        "Atender requisitos específicos do cliente",
-        "Implementar funcionalidades complexas sem frameworks",
-        "Otimizar para motores de busca",
-        "Garantir compatibilidade com sistemas legados"
+        "Gerenciar permissões de forma escalável",
+        "Criar componentes reutilizáveis com lógica desacoplada",
+        "Otimizar o carregamento de dados com paginação e caching",
+        "Integrar gráficos dinâmicos com dados atualizados em tempo real"
       ],
-      duration: "2 semanas",
-      team: "2 desenvolvedores",
-      status: "Em produção"
+      duration: "3 semanas",
+      team: "Individual",
+      status: "Concluído"
     }
   ];
 

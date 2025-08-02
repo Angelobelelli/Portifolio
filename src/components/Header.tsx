@@ -20,7 +20,7 @@ const Header = () => {
           <div className="flex items-center"> 
             <div className="w-12 h-12 bg-gradient-to-r  rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">
-                <img src='../../img/image-removebg-preview.png'></img>
+                <img src='image-removebg-preview.png'></img>
               </span>
             </div>
           </div>

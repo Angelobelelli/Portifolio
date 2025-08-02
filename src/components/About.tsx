@@ -8,13 +8,13 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
+       <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-8">
             <Monitor className="text-purple-500 mr-3" size={32} />
             <h2 className="text-3xl md:text-4xl font-bold">
               <span className="text-white">Desenvolvedor </span>
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Front-End
+                Full Stack
               </span>
             </h2>
           </div>
@@ -23,7 +23,7 @@ const About = () => {
             <div className="bg-black rounded-lg p-6">
               <div className="text-center mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                  HTML, CSS, TAILWIND, JAVASCRIPT, REACT, GIT, FIGMA.
+                  REACT, TAILWIND, TYPESCRIPT, NODE.JS,  FASTIFY, PRISMA, MYSQL, POSTGRESS, JWT, GIT.
                 </span>
               </div>
             </div>
@@ -31,14 +31,19 @@ const About = () => {
 
           <div className="text-center space-y-6">
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-              Eu sou um entusiasta do mundo da tecnologia com foco em desenvolvimento front-end. 
-              Desde o início da minha jornada, tenho me dedicado a criar experiências interativas 
-              e atraentes na web.
+              Sou um desenvolvedor com foco em criar aplicações web completas, desde o frontend até a lógica de backend. 
+              Tenho experiência com projetos reais que simulam ambientes de produção, incluindo autenticação JWT, 
+              rotas protegidas, controle por permissões e consumo de APIs RESTful.
             </p>
-            
+
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-              Atualmente estou cursando um curso Técnico de Desenvolvimento Web, 
-              sempre buscando aprender novas tecnologias e aprimorar minhas habilidades.
+              Atualmente estou aprofundando meus conhecimentos em arquitetura backend com Fastify e banco de dados relacional 
+              usando Knex e MySQL. No frontend, utilizo React com TailwindCSS, sempre buscando entregar interfaces limpas, responsivas e funcionais.
+            </p>
+
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+              Me destaco pela capacidade de estruturar projetos com clareza, aplicar boas práticas desde o início e buscar soluções escaláveis. 
+              Estou em constante evolução e aberto a novos desafios no desenvolvimento web.
             </p>
 
             <div className="pt-8">
@@ -48,7 +53,7 @@ const About = () => {
               
               <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300 flex items-center mx-auto space-x-2">
                 <Download size={20} />
-                <span>Currículo</span>
+                <a href="/CURRICULO.pdf"  download>Currículo</a>
               </button>
             </div>
           </div>
