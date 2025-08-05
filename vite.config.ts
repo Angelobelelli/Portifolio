@@ -9,5 +9,8 @@ export default defineConfig({
     exclude: ['lucide-react'],
     
   },
+  server:{
+    open: true
+  }
   
 });
