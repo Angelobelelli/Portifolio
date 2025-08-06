@@ -22,10 +22,10 @@ const Projects = () => {
         description: "Sistema web e landing page com impacto social, desenvolvidos por alunos com foco em saúde, educação e inclusão digital no Amapá.",
         longDescription: "O Projeto Integrador de Desenvolvimento Web foi realizado em parceria com uma turma de alunos, com o objetivo de aplicar conhecimentos teóricos em um contexto prático. O foco foi o desenvolvimento de um sistema web e uma landing page com impacto social, abordando temas relacionados à saúde, educação e inclusão digital no estado do Amapá. Durante o projeto, buscamos demonstrar os desafios tecnológicos enfrentados por algumas regiões do Brasil, propondo soluções acessíveis e funcionais mesmo com recursos limitados. O sistema inclui interações específicas para diferentes áreas temáticas, com design responsivo, acessível e voltado à experiência do usuário. Além disso, a aplicação foi construída em curto prazo, estimulando a criatividade e o trabalho em equipe dos alunos.",
         technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js"],
-      image: "img/print1.png",
+      image: "print1.png",
       images: [
-        "img/print1.png",
-        "img/print2.png"
+        "print1.png",
+        "print2.png"
       ],
       codeUrl: "#",
       demoUrl: "#",
@@ -61,10 +61,10 @@ const Projects = () => {
         "JWT",
         "Zod"
       ],
-      image: "img/tela1.png",
+      image: "tela1.png",
       images: [
-        "img/tela1.png",
-        "img/tela2.png"
+        "tela1.png",
+        "tela2.png"
       ],
       codeUrl: "https://github.com/F0RT-DEV/Service-Local",
       demoUrl: "",
