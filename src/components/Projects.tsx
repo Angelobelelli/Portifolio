@@ -1,151 +1,287 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
+'use client';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Code, Award, Boxes } from "lucide-react";
 
-const Projects = () => {
-  const [selectedProject, setSelectedProject] = React.useState(null);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
+import CardProject from "./CardProject";
+import TechStackIcon from "./TechStackIcon";
+import Certificate from "./Certificate";
+import ProjectModal from "./ProjectModal";
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
+// Tipagens
+interface Project {
+    id: number;
+    Img: string;
+    Title: string;
+    Description: string;
+    Link: string;
+}
 
-  const closeModal = () => {
-    setSelectedProject(null);
-    setIsModalOpen(false);
-  };
+interface Certificate {
+    id: number;
+    Img: string;
+}
 
-  const projects = [
+interface TechStack {
+    icon: string;
+    language: string;
+}
+
+const mockProjects: Project[] = [
     {
-        title: "Projeto Integrador de Desenvolvimento Web",
-        description: "Sistema web e landing page com impacto social, desenvolvidos por alunos com foco em saúde, educação e inclusão digital no Amapá.",
-        longDescription: "O Projeto Integrador de Desenvolvimento Web foi realizado em parceria com uma turma de alunos, com o objetivo de aplicar conhecimentos teóricos em um contexto prático. O foco foi o desenvolvimento de um sistema web e uma landing page com impacto social, abordando temas relacionados à saúde, educação e inclusão digital no estado do Amapá. Durante o projeto, buscamos demonstrar os desafios tecnológicos enfrentados por algumas regiões do Brasil, propondo soluções acessíveis e funcionais mesmo com recursos limitados. O sistema inclui interações específicas para diferentes áreas temáticas, com design responsivo, acessível e voltado à experiência do usuário. Além disso, a aplicação foi construída em curto prazo, estimulando a criatividade e o trabalho em equipe dos alunos.",
-        technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js"],
-      image: "print1.png",
-      images: [
-        "print1.png",
-        "print2.png"
-      ],
-      codeUrl: "#",
-      demoUrl: "#",
-      features: [
-        "Design responsivo para todos os dispositivos",
-        "Animações CSS personalizadas",
-        "Layout moderno com CSS Grid",
-        "Otimização de performance",
-        "Compatibilidade cross-browser"
-      ],
-      challenges: [
-        "Implementar animações complexas apenas com CSS",
-        "Garantir compatibilidade em navegadores antigos",
-        "Otimizar imagens para diferentes resoluções",
-        "Criar um sistema de grid responsivo personalizado"
-      ],
-      duration: "4 semanas",
-      team: "Grupo",
-      status: "Concluído"
+        id: 1,
+        Img: "./print1.png",
+        Title: "Projeto Integrador de Desenvolvimento Web",
+        Description: "Sistema web e landing page com impacto social no Amapá.",
+        Link: "https://amotur-k1qt.vercel.app/"
     },
     {
-      title: "AuxTeck",
-      description: "Sistema web completo que conecta clientes a prestadores de serviços técnicos locais, com funcionalidades inspiradas em plataformas como OLX e GetNinjas.",
-      longDescription: "Este projeto foi desenvolvido com foco em resolver problemas de acesso e organização de serviços locais. A plataforma permite que prestadores se cadastrem, completem seu perfil profissional e ofereçam serviços, enquanto clientes podem encontrar, contratar e avaliar esses serviços. Com uma arquitetura robusta baseada em Fastify e React, o sistema oferece controle de autenticação por perfil, upload de documentos, avaliações, painel administrativo e integração com meios de pagamento.",
-      technologies: [
-        "Fastify",
-        "TypeScript",
-        "Knex",
-        "MySQL",
-        "React",
-        "TailwindCSS",
-        "Axios",
-        "JWT",
-        "Zod"
-      ],
-      image: "tela1.png",
-      images: [
-        "tela1.png",
-        "tela2.png"
-      ],
-      codeUrl: "https://github.com/F0RT-DEV/Service-Local",
-      demoUrl: "",
-      features: [
-        "Sistema de cadastro e login com autenticação JWT e controle de acesso por role (cliente, prestador, admin).",
-        "Fluxo completo de ordens de serviço: criação, agendamento, execução, finalização e avaliação.",
-        "Perfis distintos com interface personalizada para cada tipo de usuário.",
-        "Administração de usuários, serviços, categorias e documentos via painel administrativo.",
-        "Geolocalização por CEP e estrutura de endereço detalhada.",
-        "Integração futura com gateway de pagamento e histórico de transações.",
-        "Validações com Zod e segurança na comunicação via JWT e bcrypt."
-      ],
-      challenges: [
-        "Criar validações apenas com CSS",
-        "Implementar feedback visual sem JavaScript",
-        "Garantir acessibilidade completa",
-        "Desenvolver um design system reutilizável"
-      ],
-      duration: "40 dias",
-      team: "Time de 3 pessoas",
-      status: "Concluído"
+        id: 2,
+        Img: "./auxtech.png",
+        Title: "AuxTeck",
+        Description: "Plataforma conectando clientes e prestadores de serviços.",
+        Link: "https://danielsantoss1200.wixsite.com/my-site-1"
     },
     {
-      title: "Dashboard Admin",
-      description: "Painel administrativo moderno e responsivo para gestão de usuários, permissões e relatórios em tempo real.",
-      longDescription: "Este projeto consiste em um dashboard administrativo completo, desenvolvido para facilitar o gerenciamento de dados em uma aplicação web. Possui autenticação segura, controle de permissões baseado em funções e visualização de dados em gráficos interativos. O design é responsivo, feito com foco em produtividade, usabilidade e acessibilidade. A aplicação foi desenvolvida utilizando React no frontend e Node.js no backend, com integração de APIs REST e persistência em banco de dados relacional.",
-      technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express", "PostgreSQL", "Chart.js"],
-      image: "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      images: [
-        "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-      ],
-      codeUrl: "https://github.com/usuario/dashboard-admin",
-      demoUrl: "https://dashboard-admin.vercel.app",
-      features: [
-        "Autenticação com JWT e controle de sessão",
-        "Dashboard responsivo com gráficos interativos (Chart.js)",
-        "CRUD completo de usuários com validação e paginação",
-        "Controle de permissões por tipo de usuário (admin/editor/viewer)",
-        "Design limpo com TailwindCSS e dark mode",
-        "Exportação de relatórios em PDF e CSV"
-      ],
-      challenges: [
-        "Gerenciar permissões de forma escalável",
-        "Criar componentes reutilizáveis com lógica desacoplada",
-        "Otimizar o carregamento de dados com paginação e caching",
-        "Integrar gráficos dinâmicos com dados atualizados em tempo real"
-      ],
-      duration: "3 semanas",
-      team: "Individual",
-      status: "Concluído"
-    }
-  ];
+        id: 3,
+        Img: "./portfolio.png",
+        Title: "Portfólio Pessoal",
+        Description: "Portfólio pessoal com projetos e habilidades.",
+        Link: "https://daniel-verissimodev.vercel.app/"
+    },
+    // Adicione os outros projetos aqui...
+];
 
-  return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            PROJETOS
-          </span>
-        </h2>
+const mockCertificates: Certificate[] = [
+   // { id: 1, Img: "./InovationCertificado.png" },
+    { id: 2, Img: "./certificadoDevEmDobro.jpg" },
+    { id: 3, Img: "./google.png" },
+];
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={index} 
-              project={project} 
-              onClick={() => openModal(project)}
-            />
-          ))}
+const techStacks: TechStack[] = [
+    { icon: "./html.svg", language: "HTML" },
+    { icon: "./css.svg", language: "CSS" },
+    { icon: "./javascript.svg", language: "JavaScript" },
+    { icon: "./typescript.svg", language: "TypeScript" },
+    { icon: "./reactjs.svg", language: "React" },
+    { icon: "./vite.svg", language: "Vite" },
+    { icon: "./next.svg", language: "Next.js" },
+    { icon: "./nodejs.svg", language: "Node.js" },
+    { icon: "./tailwind.svg", language: "Tailwind CSS" },
+];
+
+const ToggleButton = ({
+                          onClick,
+                          isShowingMore
+                      }: {
+    onClick: () => void;
+    isShowingMore: boolean;
+}) => (
+    <button
+        onClick={onClick}
+        className="px-3 py-1.5 text-slate-300 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center gap-2 bg-white/5 hover:bg-white/10 rounded-md border border-white/10 hover:border-white/20 backdrop-blur-sm group relative overflow-hidden"
+    >
+        <span className="relative z-10 flex items-center gap-2">
+            {isShowingMore ? "Ver Menos" : "Ver Mais"}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-transform duration-300 ${
+                    isShowingMore ? "group-hover:-translate-y-0.5" : "group-hover:translate-y-0.5"
+                }`}
+            >
+                <polyline points={isShowingMore ? "18 15 12 9 6 15" : "6 9 12 15 18 9"}></polyline>
+            </svg>
+        </span>
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500/50 transition-all duration-300 group-hover:w-full"></span>
+    </button>
+);
+
+const TabPanel = ({
+                      children,
+                      value,
+                      index
+                  }: {
+    children: React.ReactNode;
+    value: number;
+    index: number;
+}) => (
+    <div role="tabpanel" hidden={value !== index}>
+        {value === index && <div className="p-1 sm:p-3">{children}</div>}
+    </div>
+);
+
+const Portfolio = () => {
+    const [value, setValue] = useState(0);
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [certificates, setCertificates] = useState<Certificate[]>([]);
+    const [showAllProjects, setShowAllProjects] = useState(false);
+    const [showAllCertificates, setShowAllCertificates] = useState(false);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const initialItems = isMobile ? 4 : 6;
+
+    useEffect(() => {
+        AOS.init({ once: false });
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        setProjects(mockProjects);
+        setCertificates(mockCertificates);
+    }, []);
+
+    const handleChange = (newValue: number) => setValue(newValue);
+
+    const toggleShowMore = (type: 'projects' | 'certificates') => {
+        if (type === 'projects') setShowAllProjects(prev => !prev);
+        else setShowAllCertificates(prev => !prev);
+    };
+
+    const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
+    const displayedCertificates = showAllCertificates ? certificates : certificates.slice(0, initialItems);
+
+    const openModal = (project: Project) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedProject(null);
+        setIsModalOpen(false);
+    };
+
+    return (
+        <div className="md:px-[10%] px-[5%] w-full z-1000 sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="portfolio">
+            <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
+                <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+                    Mostruário de Portfólio
+                </h2>
+                <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+                    Explore minha jornada através de projetos, certificações e experiência técnica. Cada seção representa um marco na minha trajetória de aprendizado contínuo.
+                </p>
+            </div>
+
+            <div className="w-full">
+                {/* Abas */}
+                <div className="relative bg-transparent rounded-2xl border border-white/10 mb-6 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 backdrop-blur-sm border"></div>
+                    <div className="relative flex">
+                        {['Projetos', 'Certificações', 'Tecnologias'].map((label, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleChange(index)}
+                                className={`flex-1 py-5 px-0 text-center transition-all duration-300 rounded-2xl m-2 cursor-pointer ${
+                                    value === index
+                                        ? 'text-white bg-gradient-to-br from-purple-500/20 to-blue-500/20 shadow-lg'
+                                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                }`}
+                            >
+                                <div className="flex flex-col items-center">
+                                    {index === 0 && <Code className="mb-2 w-5 h-5" />}
+                                    {index === 1 && <Award className="mb-2 w-5 h-5" />}
+                                    {index === 2 && <Boxes className="mb-2 w-5 h-5" />}
+                                    <span className="text-sm font-medium">{label}</span>
+                                </div>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Conteúdo das abas */}
+                <TabPanel value={value} index={0}>
+                    <div className="container z-100 mx-auto flex justify-center items-center overflow-hidden ">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
+                            {displayedProjects.map((project, index) => (
+                                <div
+                                    key={project.id}
+                                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                                >
+                                    <CardProject
+                                        Img={project.Img}
+                                        Title={project.Title}
+                                        Description={project.Description}
+                                        Link={project.Link}
+                                        onClick={() => openModal(project)}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {projects.length > initialItems && (
+                        <div className="mt-6 w-full flex justify-start cursor-pointer">
+                            <ToggleButton
+                                onClick={() => toggleShowMore('projects')}
+                                isShowingMore={showAllProjects}
+                            />
+                        </div>
+                    )}
+                </TabPanel>
+
+                <TabPanel value={value} index={1}>
+                    <div className="container mx-auto flex justify-center items-center overflow-hidden ">
+                        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
+                            {displayedCertificates.map((certificate, index) => (
+                                <div
+                                    key={certificate.id}
+                                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                                >
+                                    <Certificate ImgSertif={certificate.Img} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {certificates.length > initialItems && (
+                        <div className="mt-6 w-full flex justify-start">
+                            <ToggleButton
+                                onClick={() => toggleShowMore('certificates')}
+                                isShowingMore={showAllCertificates}
+                            />
+                        </div>
+                    )}
+                </TabPanel>
+
+                <TabPanel value={value} index={2}>
+                    <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+                            {techStacks.map((stack, index) => (
+                                <div
+                                    key={index}
+                                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                                >
+                                    <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </TabPanel>
+
+                {/* Modal do projeto */}
+                {selectedProject && (
+                    <ProjectModal
+                        project={selectedProject}
+                        isOpen={isModalOpen}
+                        onClose={closeModal}
+                    />
+                )}
+            </div>
         </div>
-
-        <ProjectModal 
-          project={selectedProject}
-          isOpen={isModalOpen}
-          onClose={closeModal}
-        />
-      </div>
-    </section>
-  );
+    );
 };
 
-export default Projects;
+export default Portfolio;

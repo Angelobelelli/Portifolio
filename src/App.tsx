@@ -1,18 +1,18 @@
-import React from 'react';
+
 import Header from './components/Header';
-import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Portfolio from "./components/Projects";
+import HeroSection from "./components/Hero";
 
 function App() {
   return (
     <div className="bg-black text-white">
       <Header />
-      <Hero />
+      <HeroSection />
       <About />
-      <Projects />
+      <Portfolio />
       <Contact />
       <Footer />
     </div>

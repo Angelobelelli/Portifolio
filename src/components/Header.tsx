@@ -1,99 +1,140 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+"use client"
+import { useState, useEffect, useMemo } from "react"
+import { Menu, X } from "lucide-react"
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [currentSection, setCurrentSection] = useState("hero")
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    const navigationItems = useMemo(
+        () => [
+            { id: "hero", label: "Inicio" },
+            { id: "about", label: "Sobre" },
+            { id: "portfolio", label: "Portfolio" },
+            { id: "contato", label: "Contato" },
+        ],
+        [],
+    )
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Detecta se rolou mais de 50px
+            setIsScrolled(window.scrollY > 50)
+
+            // Detecta seção ativa de forma mais simples
+            const sections = navigationItems
+                .map((item) => {
+                    const element = document.getElementById(item.id)
+                    if (element) {
+                        const rect = element.getBoundingClientRect()
+                        return {
+                            id: item.id,
+                            top: rect.top,
+                            bottom: rect.bottom,
+                        }
+                    }
+                    return null
+                })
+                .filter(Boolean)
+
+            // Encontra a seção que está mais visível na tela
+            const activeSection = sections.find((section) => section && section.top <= 100 && section.bottom > 100)
+
+            if (activeSection) {
+                setCurrentSection(activeSection.id)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll, { passive: true })
+        handleScroll() // Chama uma vez para definir estado inicial
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [navigationItems]) // Adicionado navigationItems às dependências do useEffect
+
+    const navigateToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+            const offsetTop = element.offsetTop - 80 // Altura do navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+            })
+        }
+        setIsMenuOpen(false) // Fecha o menu mobile
     }
-    setIsMenuOpen(false);
-  };
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-purple-500/20">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center"> 
-            <div className="w-12 h-12 bg-gradient-to-r  rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">
-                <img src='image-removebg-preview.png'></img>
-              </span>
-            </div>
-          </div>
+    const toggleMobileMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="text-white hover:text-purple-400 transition-colors duration-300"
+    return (
+        <header className="fixed top-0 left-0 right-0 z-50">
+            <nav
+                className={`w-full transition-all duration-300 ${
+                    isScrolled || isMenuOpen ? "bg-gray-900/50 backdrop-blur-md shadow-lg" : "bg-transparent"
+                }`}
             >
-              Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-white hover:text-purple-400 transition-colors duration-300"
-            >
-              Sobre Mim
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-white hover:text-purple-400 transition-colors duration-300"
-            >
-              Projetos
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full transition-colors duration-300"
-            >
-              Contato
-            </button>
-          </nav>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-20">
+                        <button
+                            onClick={() => navigateToSection("hero")}
+                            className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent hover:from-blue-500 hover:to-purple-500 transition-all duration-300 flex-shrink-0"
+                        >
+                            AngeloBelelli
+                        </button>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+                        <div className="hidden md:flex items-center space-x-10">
+                            {navigationItems.map((item) => (
+                                <button key={item.id} onClick={() => navigateToSection(item.id)} className="group relative py-2">
+                  <span
+                      className={`text-base font-medium transition-all duration-300 cursor-pointer ${
+                          currentSection === item.id ? "text-white" : "text-gray-300 group-hover:text-white"
+                      }`}
+                  >
+                    {item.label}
+                  </span>
+                                    <span
+                                        className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 ${
+                                            currentSection === item.id ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                                        }`}
+                                    />
+                                </button>
+                            ))}
+                        </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 space-y-4">
-            <button 
-              onClick={() => scrollToSection('home')}
-              className="block text-white hover:text-purple-400 transition-colors duration-300"
-            >
-              Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="block text-white hover:text-purple-400 transition-colors duration-300"
-            >
-              Sobre Mim
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="block text-white hover:text-purple-400 transition-colors duration-300"
-            >
-              Projetos
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="block bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full transition-colors duration-300 w-fit"
-            >
-              Contato
-            </button>
-          </nav>
-        )}
-      </div>
-    </header>
-  );
-};
+                        <button
+                            onClick={toggleMobileMenu}
+                            className="md:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+                            aria-label="Toggle menu"
+                        >
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
+                </div>
 
-export default Header;
+                {isMenuOpen && (
+                    <div className="md:hidden bg-gray-900 border-t border-gray-800">
+                        <div className="px-4 py-4 space-y-2">
+                            {navigationItems.map((item) => (
+                                <button
+                                    key={item.id}
+                                    onClick={() => navigateToSection(item.id)}
+                                    className={`block w-full text-left px-4 py-3 rounded-lg text-base transition-all duration-200 ${
+                                        currentSection === item.id
+                                            ? "bg-gray-800 text-white font-medium"
+                                            : "text-gray-300 hover:bg-gray-800/50 hover:text-white"
+                                    }`}
+                                >
+                                    {item.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </nav>
+        </header>
+    )
+}
+
+export default Navbar
