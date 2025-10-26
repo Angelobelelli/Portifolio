@@ -45,7 +45,7 @@ const CardProject: React.FC<CardProjectProps> = ({ Img, Title, Description, Link
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 px-3 py-1.5 rounded-lg bg-blue-500/10 hover:bg-blue-500/20"
                                 >
-                                    <span className="text-sm font-medium">Ver No Ar</span>
+                                    <span className="text-sm font-medium">Ver no ar</span>
                                     <ExternalLink className="w-4 h-4" />
                                 </a>
                             ) : (

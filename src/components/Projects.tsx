@@ -33,23 +33,23 @@ const mockProjects: Project[] = [
         id: 1,
         Img: "./print1.png",
         Title: "Projeto Integrador de Desenvolvimento Web",
-        Description: "Sistema web e landing page com impacto social no Amapá.",
-        Link: "https://amotur-k1qt.vercel.app/"
+        Description: "Plataforma de serviços técnicos onde atuei como Líder Back-end no desenvolvimento de uma plataforma web voltada para educação, saúde e assistência social no estado do Amapá.",
+        Link: "https://plataforma-ap.netlify.app"
     },
     {
         id: 2,
         Img: "./auxtech.png",
         Title: "AuxTeck",
-        Description: "Plataforma conectando clientes e prestadores de serviços.",
-        Link: "https://danielsantoss1200.wixsite.com/my-site-1"
+        Description: "Plataforma de intermediação de serviços técnicos, conectando clientes e prestadores com segurança, praticidade e eficiência.",
+        Link: "https://aux-tech.vercel.app"
     },
     {
         id: 3,
-        Img: "./portfolio.png",
-        Title: "Portfólio Pessoal",
-        Description: "Portfólio pessoal com projetos e habilidades.",
-        Link: "https://daniel-verissimodev.vercel.app/"
-    },
+        Img: "./ArbitraBet.png",
+        Title: "ArbitraBet",
+        Description: "Sistema de Arbitragem Esportiva, o sistema possui integrações para gestão de competições, árbitros e partidas, com foco em eficiência e transparência nos campeonatos regionais.",
+        Link: "https://github.com/Angelobelelli/Arbitragem"
+    }
     // Adicione os outros projetos aqui...
 ];
 
