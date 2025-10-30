@@ -37,7 +37,7 @@ const AboutSection = () => {
                 icon: Globe,
                 color: "from-[#6366f1] to-[#a855f7]",
                 label: "Localização",
-                description: "Atualmente moro em Amontada-CE",
+                description: "Atualmente moro em Vitória-ES",
                 animation: "fade-left",
             },
         ],
